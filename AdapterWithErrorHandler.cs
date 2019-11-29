@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using EchoBot;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Builder.TraceExtensions;
@@ -14,7 +15,8 @@ namespace Microsoft.BotBuilderSamples
         public AdapterWithErrorHandler(IConfiguration configuration, ILogger<BotFrameworkHttpAdapter> logger)
             : base(configuration, logger)
         {
-            Use(new ShowTypingMiddleware());
+            //Use(new ShowTypingMiddleware());
+            Use(new CustomShowTypingMiddleware());
 
             OnTurnError = async (turnContext, exception) =>
             {
