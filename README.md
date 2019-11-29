@@ -1,4 +1,5 @@
-﻿# Sample project for Github issue
+# Sample project for Github issue
+https://github.com/microsoft/botbuilder-dotnet/issues/3047
 
 # EchoBot
 
